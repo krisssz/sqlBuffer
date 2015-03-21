@@ -10,7 +10,6 @@ class sqlBuffer:
 		self.count = 0
 		self.query = []
 		self.query.append("INSERT INTO %s (%s) VALUES " % (table, ', '.join(str(c) for c in columns)))
-		return self
 	
 	def add(self, str):
 		if self.count != 0:
